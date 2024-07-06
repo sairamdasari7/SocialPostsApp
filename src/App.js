@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import PostsDisplayScreen from './pages/PostsDisplayScreen';
+import CreatePostScreen from './pages/CreatePostScreen';
+import EditPostScreen from './pages/EditPostScreen';
 
-function App() {
+const App = () => {
+  const [posts, setPosts] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<PostsDisplayScreen posts={posts} setPosts={setPosts} />} />
+        <Route path="/create-post" element={<CreatePostScreen posts={posts} setPosts={setPosts} />} />
+        <Route path="/edit-post/:id" element={<EditPostScreen posts={posts} setPosts={setPosts} />} />
+      </Routes>
     </div>
   );
 }
