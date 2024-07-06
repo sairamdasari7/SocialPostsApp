@@ -17,7 +17,7 @@ My Posts App is a simple responsive web application built with ReactJS that allo
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/my-posts-app.git
+    git clone https://github.com/sairamdasari7/SocialPostsApp.git
     cd my-posts-app
     ```
 
