@@ -31,7 +31,7 @@ My Posts App is a simple responsive web application built with ReactJS that allo
     npm start
     ```
 
-The application will be available at `http://localhost:3000`.
+The application will be available at `https://dailyposts.netlify.app/`.
 
 
 ## Components
